@@ -1,0 +1,11 @@
+# Databases
+*.db
+
+# Raw data
+*.csv
+
+# Python
+__pycache__/
+
+# OS files
+.DS_Store
