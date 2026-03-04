@@ -1,13 +1,13 @@
 -- Определение активности пользователей по дням, неделям, месяцам (DAU|WAU|MAU)
 -- DAU:
-SELECT DATE(created_ts) AS date, COUNT(user_id) AS DAU
+SELECT DATE(created_ts) AS date, COUNT(DISTINCT user_id) AS DAU
 FROM orders
 GROUP BY DATE(created_ts)
 ORDER BY date
 LIMIT 1000
 
 -- WAU:
-SELECT COUNT(user_id) AS WAU, week, year
+SELECT COUNT(DISTINCT user_id) AS WAU, week, year
 FROM
 	(SELECT user_id, STRFTIME('%W', created_ts) AS week, STRFTIME('%Y', created_ts) AS year
 	FROM orders)
@@ -15,7 +15,7 @@ GROUP BY week, year
 ORDER BY week, year
 
 -- MAU:
-SELECT COUNT(user_id) AS MAU, month, year
+SELECT COUNT(DISTINCT user_id) AS MAU, month, year
 FROM
 	(SELECT user_id, STRFTIME('%m', created_ts) AS month, STRFTIME('%Y', created_ts) AS year
 	FROM orders)
@@ -101,4 +101,5 @@ CASE WHEN month = first_month AND year = first_year THEN 'new' ELSE 'returning' 
 COUNT(DISTINCT user_id) AS users_count
 FROM active_by_month
 GROUP BY year, month, user_type
+
 ORDER BY year, month, user_type
