@@ -58,6 +58,7 @@
 Пример результата:
 
 ![MAU](docs/screenshots/MAU.png)
+
 ![New vs Returning Users](docs/screenshots/new_vs_returning_users_by_month.png)
 
 Наблюдения:
@@ -83,6 +84,7 @@
 
 - выявление узких мест в процессе доставки  
 - анализ причин отмен заказов
+
 ![Причины отмены заказов](docs/screenshots/reasons_to_cancel_order.png) 
 
 ---
@@ -98,6 +100,7 @@
 - активность когорт во времени
 
 Цель — оценить удержание пользователей и “липкость” продукта.
+
 ![Retention по неделям](docs/screenshots/retention_by_weeks.png) 
 
 ---
@@ -109,8 +112,9 @@
 - **GMV (Gross Merchandise Value)**
 - **Average Order Value**
 - доля заказов с промо
-![promo](docs/screenshots/promo_usage.png) 
 - **ARPU**
+
+![promo](docs/screenshots/promo_usage.png) 
 
 Эти метрики позволяют понять структуру выручки и влияние промо-акций на спрос.
 
