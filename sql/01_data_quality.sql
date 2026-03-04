@@ -1,6 +1,6 @@
 -- Подсчет количества строк в каждой таблице.
-SELECT COUNT(*) AS orders_cnt FROM orders
-SELECT COUNT(*) AS restaurants_cnt FROM restaurants
+SELECT COUNT(*) AS orders_cnt FROM orders;
+SELECT COUNT(*) AS restaurants_cnt FROM restaurants;
 SELECT COUNT(*) AS users_cnt FROM users;
 --- orders_cnt = 60000; restaurants_cnt = 120; users_cnt = 12000.
 
